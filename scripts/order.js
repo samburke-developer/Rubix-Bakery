@@ -114,6 +114,11 @@ const generateOrderObject = (item, amount) =>
     let orderCost = 0;
     let orderPacks = 0;
     lineItems = [];
+
+    //for each pack check:
+    //  - if we have already fullfilled order
+    //  - if amount in a pack is less than what is unfullfilled
+    //  - if we use this pack multple times and theres a remainder will another pack that we offer be able fully fulfill this order
     packs.forEach((pack) => 
     {
         if (unfilledAmount != 0 && 
@@ -125,10 +130,13 @@ const generateOrderObject = (item, amount) =>
             orderPacks += numOfPacks;
             orderCost +=  pack.cost * numOfPacks;
             unfilledAmount = unfilledAmount % pack.amount
+
+            //add line item to the array
             lineItems.push(`${numOfPacks > 1 ? numOfPacks + " packs": "1 pack"} of ${pack.amount} @ $${pack.cost} each \n`)
         } 
     })
 
+    //if we were able to fulfill return an order object else return null
     if(unfilledAmount == 0)
     {
         return {name: item.name, amount: amount, lineItems: lineItems, cost: orderCost.toFixed(2), packs: orderPacks}

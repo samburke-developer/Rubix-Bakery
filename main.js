@@ -17,7 +17,6 @@ let createWindow = async () => {
   } catch (err) {
     // Could not initiate 'electron-pug'
   }
-  const appIcon = new Tray('./images/logo.jpg')
   mainWindow = new BrowserWindow({
     width: 1200,
     height: 720,
@@ -30,7 +29,7 @@ let createWindow = async () => {
     backgroundColor: '#2e2c29',
     icon: './images/logo.jpg' 
   })
-  mainWindow.webContents.openDevTools()
+  //mainWindow.webContents.openDevTools()
   // and load the index.html of the app.
   mainWindow.loadFile('./views/index.pug')
 
