@@ -1,0 +1,21 @@
+mixin productRow(product)
+    .row.product-row
+        .col-sm-2
+            img.product-img(src=`${product.img}`)
+        .col-sm-10
+            .row.col-sm-12
+                h4 #{product.name}
+            .row
+                .col-sm-5
+                    p Packs Avaliable
+                    for pack in product.packs
+                        .row.col-sm-12
+                            p #{pack.amount} for $#{pack.cost}
+                .col-sm-6(style="text-align: left; padding: 0rem;")
+                    button.square_btn(onClick=`removeItem('${product.code}')`) -
+                    input(id=`${product.code}-val` type="number")
+                    button.square_btn(onClick=`addItem('${product.code}')`) +
+                    button.square_btn(onClick=`checkOrder('${product.code}')`)  Add to order
+                    .row.col-sm-12
+                        p *min order #{product.packs.sort((a, b) => a.amount-b.amount)[0].amount}
+                    

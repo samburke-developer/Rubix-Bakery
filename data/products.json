@@ -1,0 +1,29 @@
+{
+"products": [{
+    "name": "Vegemite Scroll",
+    "code": "VS5",
+    "img": "https://justamumnz.com/wp-content/uploads/2018/01/GLAD-BTS-2-200x200.jpg",
+    "packs": [ 
+        {"amount": 3, "cost": "6.99" },
+        {"amount": 5, "cost": "8.99" }
+     ]
+},{
+    "name": "Blueberry Muffin",
+    "code": "MB11",
+    "img": "https://www.dessertnowdinnerlater.com/wp-content/uploads/2017/07/Blueberry-Muffins-1-200x200.jpg",
+    "packs": [ 
+        {"amount": 2, "cost": "9.95" },
+        {"amount": 5, "cost": "16.95" },
+        {"amount": 8, "cost": "24.95" }
+     ]
+},{
+    "name": "Croissant",
+    "code": "CF",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcBjhSnqIGEv9h9ujQKU773eML_fNBtqq-q1-wBvNHR4Dxzckm",
+    "packs": [ 
+        {"amount": 3, "cost": "5.95" },
+        {"amount": 5, "cost": "9.95" },
+        {"amount": 9, "cost": "16.99" }
+    ]
+}]
+}

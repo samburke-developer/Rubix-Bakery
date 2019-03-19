@@ -1,0 +1,11 @@
+mixin receipt()
+  .modal(class="modal" id=`receipt` tabindex="-1" role="dialog" aria-hidden="true" style="color: black;")
+      .modal-dialog(role="document")
+          .modal-content
+              .modal-body
+                  .row
+                    h1.modal-title Rubix Bakery
+                  .row
+                    h3 Customer Copy
+                  #receipt-content
+                    .row

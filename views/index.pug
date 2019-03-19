@@ -1,0 +1,26 @@
+extends layout
+include mixins/_productRow
+include mixins/_receipt 
+block content
+  .row(style="margin: 0px; padding: 0px;")
+    .col-sm-12(style="margin: 0px; padding: 0px;")
+      #nav
+        h1(style="margin: 0px; padding: 0px;") Rubix Bakery
+  .row(style="margin: 0px; padding: 0px;  height:100%")
+    .col-sm-7(style="margin: 0px; padding: 0px;")
+      #products(style="padding-bottom: 0px;")
+        h3 Products
+        for product in products
+          +productRow(product)
+    .col-sm-5(style="margin: 0px; padding: 0px;")
+      #cart(style="padding-bottom: 0px;")
+        h3 Cart
+        .row
+          .col-sm-12
+            #cart-items
+        .row
+          .col-sm-12
+            #place-order
+                h5#order-total $100.00
+                button.btn-lg.btn-primary.btn-order#btn-order(onClick="order()" type="button" data-toggle="modal" data-target="#receipt") Place Order
+                +receipt()
