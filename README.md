@@ -11,6 +11,8 @@ npm install
 npm start 
 ```
 
+![Image of Application Running](https://github.com/samburke-developer/Rubix-Bakery/blob/master/images/app.png?raw=true)
+
 The application allow users to add multiple items to a cart and then place an order.
 
 When adding items to the cart the system verifies if the order is possible by making sure there is more the minimum amount of items to fulfill order and that there is a combination of packs that can satisfy the amount exactly.
