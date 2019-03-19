@@ -17,9 +17,9 @@ When adding items to the cart the system verifies if the order is possible by ma
 
 When the user places an order the they are shown a receipt that contains a breakdown of their order as well as the total.
 
-This application was built on top of the [Electron Quick Start Application](https://electronjs.org/docs/tutorial/quick-start)
+This application was built on top of the [Electron Quick Start Application](https://electronjs.org/docs/tutorial/quick-start).
 
-[order.js](https://github.com/samburke-developer/Rubix-Bakery/blob/master/scripts/order.js) is the script that handles all the heavy lifting in the application such as handling user interactions and updating the interface
+[order.js](https://github.com/samburke-developer/Rubix-Bakery/blob/master/scripts/order.js) is the script that handles all the heavy lifting in the application such as handling user interactions and updating the interface.
 
 I have used [pug](https://pugjs.org/api/getting-started.html) as a templating language to fast track development.
 
